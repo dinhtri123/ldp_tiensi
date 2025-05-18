@@ -579,6 +579,10 @@ img {
   width: 100%;
   min-height: 40px;
   padding: 0px 15px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: white;
 }
 .form-content form label input::placeholder,
 .form-content form label select {
@@ -593,6 +597,20 @@ img {
   background: white;
   color: black;
 }
+
+/* Fix for iOS select background */
+@supports (-webkit-touch-callout: none) {
+  .form-content form label select {
+    background-color: white !important;
+    color: black !important;
+  }
+  
+  .form-content form label select option {
+    background-color: white !important;
+    color: black !important;
+  }
+}
+
 .form-content form > div {
   display: grid;
   grid-template-columns: 1fr 1fr;
