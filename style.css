@@ -587,6 +587,11 @@ img {
   font-family: "Montserrat", sans-serif;
   outline: none;
   appearance: none;
+  background: white;
+}
+.form-content form label select option {
+  background: white;
+  color: black;
 }
 .form-content form > div {
   display: grid;
